@@ -36,6 +36,11 @@ public:
 
     void dfs(TreeNode *left, TreeNode *right)
     {
+        // Case if the condition has already failed and does not require any more processing
+        if (result == false)
+        {
+            return;
+        }
 
         // Base Case for Leaf Childs
         if (!right && !left)
